@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package nft;
+
+service NftService {
+    rpc GetHello(GetHelloRequest) returns (GeHelloResponse) {}
+}
+
+message GetHelloRequest {
+    string message = 1;
+}
+message GeHelloResponse {
+    bool error = 1;
+    string message = 2;
+    HelloData data = 3;
+}
+message HelloData {
+    string message = 1;
+}
